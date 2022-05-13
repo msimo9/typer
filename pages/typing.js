@@ -10,6 +10,7 @@ const TypingPractice = () => {
     const data = router.query;
     const numberOfWords = data.numberOfWords;
     const customText = data.customText;
+    const keyboardVis = data.keyboardVis;
     const typingCharacters = !customText ? Object.values(data.data) : data.data;
     const [words, setWords] = useState([]);
     const [wordsReady, setWordsReady] = useState(false);
@@ -153,7 +154,9 @@ const TypingPractice = () => {
                     </div>
                 }
             </div>
-            <VirtualKeyboard />
+            {
+                keyboardVis === "true" ? <VirtualKeyboard /> : null
+            }
             <div className="absolute bottom-2 left-2 h-12 w-24 rounded-md bg-sixth flex justify-center items-center text-2xl text-white">
                 <Link href="/">
                     <a>

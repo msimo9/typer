@@ -21,6 +21,7 @@ const Menu = () => {
                         data: item.data,
                         customText: false,
                         numberOfWords: numberOfWords,
+                        keyboardVis: keyboardVis,
                     }
                     return(
                         <Link key={index} href={{
@@ -69,6 +70,7 @@ const Menu = () => {
                                     data: textAreaText,
                                     customText: true,
                                     numberOfWords: numberOfWords,
+                                    keyboardVis: keyboardVis,
                                 },
                             }}>
                                 <a>
